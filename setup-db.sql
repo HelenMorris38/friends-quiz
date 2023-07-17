@@ -12,4 +12,9 @@ CREATE TABLE questions (
     answer VARCHAR
 );
 
+COPY questions(question,answer)
+FROM '/Users/helenmorris/Documents/personal-projects/friends-quiz/friends_questions - Sheet1.csv'
+DELIMITER ','
+CSV HEADER;
 
+SELECT * FROM questions;
