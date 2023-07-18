@@ -1,4 +1,13 @@
 import pandas as pd
+import psycopg2
+
+
+def connect_to_db():
+    try:
+        conn = psycopg2.connect("dbname=friends_quiz user=helenmorris")
+        return conn
+    except:
+        return 'unable to connect to database'
 
 
 def load_data_frame_from_csv(filepath):
